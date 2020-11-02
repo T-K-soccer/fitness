@@ -146,6 +146,8 @@ p {
 }
 .header-in {
   height: 145px;
+  background-color: #ffffff;
+  z-index: 50;
 }
 .header-in .cv {
   height: 50px;
@@ -187,6 +189,7 @@ p {
 .drawer-inner {
   width: 100vw;
   height: 95px;
+  position: relative;
 }
 .drawer-hidden {
   display: none;
@@ -223,20 +226,17 @@ p {
   top: 10px;
 }
 #mobile-logo {
-  position: relative;
-  margin-left: 33vw;
-  /* text-align: center; */
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  left: calc(50% - 55px);
+  top: 15px;
+  /* position: relative; */
+  /* margin-left: 33vw; */
+  text-align: center;
   color: #0b4fa3;
 }
-#mobile-logo span {
-  position: absolute;
-  right: -24px;
-}
-/* .mobile-logo {
-  margin-left: 33vw;
-  /* text-align: center; */
-/* color: #0b4fa3;
-} */
+
 #drawer-check:checked ~ .drawer-open span {
   background: rgba(255, 255, 255, 0);
 }
@@ -253,12 +253,17 @@ p {
   top: 90px;
   opacity: 0;
   width: 100%;
-  height: 150px;
   background-color: #ffffff;
   transition: opacity 0.3s;
 }
 .drawer-item {
   margin: 8px 0;
+}
+.drawer-item a {
+  line-height: 35px;
+}
+.drawer-item a:hover {
+  color: #0b4fa3;
 }
 .drawer-content a {
   color: #333;
@@ -293,6 +298,17 @@ p {
   height: 620px;
   background-image: url(images/gym.jpg);
   background-size: cover;
+}
+#main-visual h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 8vw;
+  font-weight: 800;
+  padding-top: 200px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 1px #333333, -2px 2px 1px #333333, 2px -2px 1px #333333,
+    -2px -2px 1px #333333, 2px 0px 1px #333333, 0px 2px 1px #333333,
+    -2px 0px 1px #333333, 0px -2px 1px #333333;
 }
 #topics {
   height: 320px;
@@ -375,13 +391,31 @@ p {
   /* float: left; */
 }
 #information-content {
-  display: inline-block;
-  width: 50vw;
+  /* display: inline-block; */
+  width: 60%;
   /* float: right; */
-  text-align: center;
+  /* text-align: center; */
 }
 .information-item {
   margin-bottom: 10px;
+}
+.information-item a {
+  display: flex;
+}
+.date-heading {
+  /* display: inline-block; */
+  display: block;
+  width: 150px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-align: left;
+  color: #333333;
+  /* width: 30%; */
+}
+.txt {
+  display: inline-block;
+  width: 80%;
+  color: #333333;
 }
 #feature {
   max-width: 1200px;
@@ -633,7 +667,131 @@ footer .footer-cv:hover {
   }
 }
 @media screen and (max-width: 700px) {
+  .header-in {
+    position: fixed;
+    top: 0;
+  }
+  #main-visual {
+    height: 60vh;
+    background-position: center;
+  }
+  #main-visual h1 {
+    font-size: 50px;
+    padding-top: 180px;
+  }
+  #topics {
+    flex-direction: column;
+    height: auto;
+  }
+  #topics .topic {
+    width: 100%;
+    height: 30vh;
+  }
+  #topics .topic h2 {
+    margin-top: 50px;
+  }
+  #topics .topic .btn {
+    margin-top: 50px;
+    padding: 10px 80px;
+  }
+  #information {
+    padding: 30px 0;
+  }
+  #information h2 {
+    width: 100%;
+    font-size: 32px;
+  }
+  .information-item a {
+    display: block;
+  }
+  #information-content {
+    width: 100%;
+  }
+  .information-in {
+    flex-direction: column;
+  }
+  .txt {
+    width: 100%;
+  }
+  #feature {
+    padding: 30px 0;
+  }
+  #feature h2 {
+    font-size: 32px;
+    text-align: left;
+  }
   #feature .content-item {
     width: 100%;
+  }
+  #feature .content-item .title {
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  .content-item .title::after {
+    height: 150px;
+  }
+  .content-item .title h3 {
+    padding-top: 60px;
+  }
+  .content-item p {
+    line-height: 20px;
+  }
+  #feature .cv {
+    margin-top: 0px;
+  }
+  #feature .cv a {
+    padding: 0 57px;
+  }
+  #measures {
+    padding: 30px 0;
+  }
+  #measures h3 {
+    font-size: 25px;
+  }
+  .none {
+    display: none;
+  }
+  #measures .item {
+    width: 46%;
+    height: 165px;
+  }
+  #measures .item p {
+    font-size: 12px;
+  }
+  #cooperation {
+    padding: 30px 0;
+  }
+  #cooperation .heading {
+    font-size: 25px;
+  }
+  #cooperation p {
+    font-size: 16px;
+  }
+  #cooperation .reception {
+    font-size: 20px;
+  }
+  #cooperation .item {
+    flex-direction: column-reverse;
+    max-width: none;
+    width: 100%;
+  }
+  #cooperation .wrapper .item:nth-child(1)::after {
+    width: 100%;
+    height: 150px;
+    background-position: center 80%;
+  }
+  #cooperation .txt-box {
+    width: 100%;
+    height: 50px;
+  }
+  #cooperation .txt-box p {
+    padding: 0;
+    line-height: 50px;
+    text-align: center;
+  }
+  #cooperation .wrapper .item:nth-child(2)::after {
+    width: 100%;
+    height: 150px;
+    background-position: center 80%;
   }
 }

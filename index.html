@@ -12,6 +12,10 @@
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="header">
@@ -70,7 +74,9 @@
       </div>
     </header>
     <main>
-      <div id="main-visual"></div>
+      <div id="main-visual">
+        <h1>さあ、鍛えよう</h1>
+      </div>
       <div id="topics">
         <div class="topic chosen">
           <h2>選ばれる理由</h2>
@@ -93,30 +99,31 @@
           <ul class="information-list">
             <li class="information-item">
               <a href="#">
-                <time class="date" datetime="2020-06-29">2020.06.29</time>
-                <span class="category">キャンペーン</span>
-                <span>ギフトカードプレゼントキャンペーン実施中</span>
+                <div class="date-heading">
+                  <time class="date" datetime="2020-10-29">2020.10.29</time>
+                  <span class="category">キャンペーン</span>
+                </div>
+                <div class="txt">ギフトカードプレゼントキャンペーン実施中</div>
               </a>
             </li>
             <li class="information-item">
               <a href="#">
-                <time class="date" datetime="2020-06-29">2020.06.29</time>
-                <span class="category">キャンペーン</span>
-                <span>ギフトカードプレゼントキャンペーン実施中</span>
+                <div class="date-heading">
+                  <time class="date" datetime="2020-08-21">2020.08.21</time>
+                  <span class="category">キャンペーン</span>
+                </div>
+                <div class="txt">今月末まで！月会費６千円キャンペーン</div>
               </a>
             </li>
             <li class="information-item">
               <a href="#">
-                <time class="date" datetime="2020-06-29">2020.06.29</time>
-                <span class="category">キャンペーン</span>
-                <span>ギフトカードプレゼントキャンペーン実施中</span>
-              </a>
-            </li>
-            <li class="information-item">
-              <a href="#">
-                <time class="date" datetime="2020-06-29">2020.06.29</time>
-                <span class="category">キャンペーン</span>
-                <span>ギフトカードプレゼントキャンペーン実施中</span>
+                <div class="date-heading">
+                  <time class="date" datetime="2020-06-29">2020.06.29</time>
+                  <span class="category">ニュース</span>
+                </div>
+                <div class="txt">
+                  おかげさまで、ダンベルジムは10周年を迎えることができました！
+                </div>
               </a>
             </li>
           </ul>
@@ -174,7 +181,9 @@
     <div id="measures">
       <div class="container">
         <h3>
-          ご利用される皆様の安心と安全のために<br />次のような衛生管理に取り組んでまいります。
+          ご利用される皆様の安心と安全のために<br
+            class="none"
+          />次のような衛生管理に取り組んでまいります。
         </h3>
         <div class="wrapper">
           <div class="item">
@@ -223,14 +232,22 @@
             <div class="item">
               <div class="txt-box">
                 <p>
-                  楽しく効果的<br />多彩なプログラム<br />スタイルアップヨガ
+                  <span class="none"> 楽しく効果的 </span>
+                  <br class="none" />
+                  <span class="none"> 多彩なプログラム </span>
+                  <br class="none" />
+                  スタイルアップヨガ
                 </p>
               </div>
             </div>
 
             <div class="item">
               <div class="txt-box">
-                <p>プールやお風呂など<br />充実したくつろぎ施設</p>
+                <p>
+                  <span class="none"> プールやお風呂など </span>
+                  <br class="none" />
+                  充実したくつろぎ施設
+                </p>
               </div>
             </div>
           </div>
